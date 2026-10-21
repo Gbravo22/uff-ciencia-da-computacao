@@ -60,3 +60,20 @@ python lista-3/ex003.py
 ### Conceitos praticados
 
 `input`/`print` · operadores e precedência · `if`/`elif`/`else` · `while` e `for` · listas · funções · **recursão** · Bubble Sort · `map` e funções de ordem superior · tratamento de exceções
+
+---
+
+### 🔧 Correções feitas depois da disciplina
+
+Revisando as listas, encontrei e corrigi alguns bugs nas soluções originais:
+
+| Arquivo | Problema | Correção |
+|---------|----------|----------|
+| [lista-1/ex003(a).py](lista-1/ex003(a).py) | Parêntese faltando (erro de sintaxe) | Fechado o `float(input(...))` |
+| [lista-1/ex003(c).py](lista-1/ex003(c).py) | `]` sobrando (erro de sintaxe) | Removido |
+| [lista-1/ex003(b).py](lista-1/ex003(b).py) | Com `9 1 2`, mostrava o 9 **e** a mensagem de empate, porque o `else` só valia para o último `if` | `if`s viraram `if`/`elif`/`else` |
+| [lista-3/ex006.py](lista-3/ex006.py) | Ao escolher as opções 1 ou 2, também aparecia "Escolha um número válido" | Mesmo ajuste: `if`/`elif`/`else` |
+| [lista-3/ex001.py](lista-3/ex001.py) | O `while i <= len(lista)` poderia acessar uma posição fora da lista | Trocado por `i < len(lista)` |
+| [lista-4/ex005.py](lista-4/ex005.py) | Comparava valores com posições e ignorava o último elemento (com `5,3,8,1,7` e K=0, respondia 3 em vez de 1) | Guarda a posição e o valor do menor separadamente e percorre a lista inteira |
+| [lista-4/ex007.py](lista-4/ex007.py) | O valor padrão de `fim` era calculado uma vez só, com a palavra global, quando a função era definida | `fim` agora é calculado dentro da função |
+| [lista-4/ex009.py](lista-4/ex009.py) | O penúltimo elemento não era suavizado, e listas com menos de 3 elementos davam resultado errado | O laço vai até o penúltimo elemento, e listas pequenas voltam sem alteração |

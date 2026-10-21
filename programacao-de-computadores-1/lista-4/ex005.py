@@ -1,9 +1,9 @@
 def indice_min(lista, k):
-    elementos = len(lista) - 1
-    parametro = lista[k]
+    elementos = len(lista)
+    parametro = k
     elemento = lista[k]
     for i in range(k,elementos):
-        if lista[i] < parametro:
+        if lista[i] < elemento:
             parametro = i
             elemento = lista[i]
         else:

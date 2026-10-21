@@ -24,9 +24,9 @@ print("3) ver as duas listas")
 escolha = int(input())
 if escolha == 1:
     print(lista_nomes_ordenada)
-if escolha == 2:
+elif escolha == 2:
     print(lista_med_ordenada)
-if escolha == 3:
+elif escolha == 3:
     print(lista_med_ordenada)
     print(lista_nomes_ordenada)
 else:

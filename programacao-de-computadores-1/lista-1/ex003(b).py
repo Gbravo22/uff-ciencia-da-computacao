@@ -9,9 +9,9 @@ print(media)
 print(produto)
 if a > b and a > c:
   print(a)
-if b > a and b > c:
+elif b > a and b > c:
   print(b)
-if c > a and c > b:
+elif c > a and c > b:
   print(c)
 else:
   print("Você digitou 2 ou mais números maiores iguais")

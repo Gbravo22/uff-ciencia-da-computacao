@@ -7,7 +7,7 @@ for i in range(0,5):
 vetor = input('Digite o número a ser verificado: ')
 if vetor in lista:
     i = 0
-    while i<=len(lista):
+    while i<len(lista):
         if vetor == lista[i]:
             print(f'Esse vetor está dentro da lista e está na posição {i+1}')
             break

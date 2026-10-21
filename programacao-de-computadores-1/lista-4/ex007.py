@@ -1,6 +1,8 @@
 print("Digite a palavra que deseja verificar:")
 palavra = str(input())
-def eh_palindrome(palavra, verificar = True, inicio = 0, fim = len(palavra) - 1):
+def eh_palindrome(palavra, verificar = True, inicio = 0, fim = None):
+    if fim is None:
+        fim = len(palavra) - 1
     if len(palavra) == 0:
         return True
     if inicio >= fim:
